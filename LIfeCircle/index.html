@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Life Circle</title>
+</head>
+<body>
+
+<script>
+
+    let MyTimerProto = Object.create(HTMLElement.prototype);
+
+
+    MyTimerProto.tick = function() {
+        this.timer++;
+        this.innerHTML = this.timer;
+    };
+
+
+    MyTimerProto.createdCallback = function() {
+        this.timer = 0;
+    };
+
+
+    MyTimerProto.attachedCallback = function() {
+        setInterval(this.tick.bind(this), 1000);
+    };
+
+
+    document.registerElement('my-timer' , {
+        prototype: MyTimerProto
+    });
+
+</script>
+
+
+<my-timer id="timer">0</my-timer>
+
+
+</body>
+</html>
