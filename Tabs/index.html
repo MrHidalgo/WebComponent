@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab Item</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<tab-element>
+    <nav>
+        <tab-nav-item target="tab1" class="active" name="Tabs 1"></tab-nav-item>
+        <tab-nav-item target="tab2" name="Tabs 2"></tab-nav-item>
+        <tab-nav-item target="tab3" name="Tabs 3"></tab-nav-item>
+    </nav>
+
+    <tab-content-item target="tab1" content="Content Tabs 1" class="active"></tab-content-item>
+    <tab-content-item target="tab2" content="Content Tabs 2"></tab-content-item>
+    <tab-content-item target="tab3" content="Content Tabs 3"></tab-content-item>
+</tab-element>
+
+<script src="TabElement.js"></script>
+<script src="TabNavigationItem.js"></script>
+<script src="TabContentItem.js"></script>
+</body>
+</html>

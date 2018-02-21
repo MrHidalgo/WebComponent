@@ -1,0 +1,11 @@
+*:not(:defined) {
+    display: none;
+}
+
+tab-content-item {
+    display: none;
+}
+
+tab-content-item.active {
+    display: block;
+}
